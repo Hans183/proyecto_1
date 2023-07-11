@@ -28,13 +28,16 @@ class _ConfViewState extends State<ConfView> {
                 image: AssetImage('assets/fondos/fondopantalla2.jpg'),
                 fit: BoxFit.cover)),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(
-            textAlign: TextAlign.center,
-            '¿Cuanto va a incrementar?',
-            style: GoogleFonts.ubuntu(
-              textStyle: Theme.of(context).textTheme.displayMedium,
-              fontSize: 25.0,
-              color: Colors.white,
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Text(
+              textAlign: TextAlign.center,
+              '¿Cuanto va a incrementar?',
+              style: GoogleFonts.ubuntu(
+                textStyle: Theme.of(context).textTheme.displayMedium,
+                fontSize: 25.0,
+                color: Colors.white,
+              ),
             ),
           ),
           SizedBox(
@@ -42,14 +45,14 @@ class _ConfViewState extends State<ConfView> {
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
-                onChanged: (value) {
-                  setState(() {});
-                },
+                textAlign: TextAlign.center,
+                keyboardType: TextInputType.number,
                 decoration: const InputDecoration(
+                  label: Center(child: Text('1,2,3...')),
+                  alignLabelWithHint: true,
                   filled: true,
                   hintStyle: TextStyle(color: Colors.white),
                   fillColor: Colors.transparent,
-                  labelText: "1,2,3...",
                   labelStyle: TextStyle(color: Colors.white),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.white)),
@@ -58,8 +61,6 @@ class _ConfViewState extends State<ConfView> {
                   contentPadding:
                       EdgeInsets.symmetric(vertical: 10.0, horizontal: 16),
                 ),
-                keyboardType: TextInputType.number,
-                textAlign: TextAlign.center,
                 style: GoogleFonts.ubuntu(
                   textStyle: Theme.of(context).textTheme.displayMedium,
                   fontSize: 20.0,

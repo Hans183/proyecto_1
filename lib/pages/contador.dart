@@ -13,7 +13,6 @@ class ContView extends StatefulWidget {
 class _ContViewState extends State<ContView> {
   int _counter = 0;
   String _backgroundImagePath = 'assets/fondos/fondopantalla.jpeg';
-  String _backgroundImagePath2 = 'assets/fondos/fondopantalla2.jpg';
 
   void _incrementCounter() {
     setState(() {
